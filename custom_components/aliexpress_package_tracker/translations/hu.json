@@ -1,0 +1,81 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "AliExpress Követő Beállítása",
+        "description": "⚠️ Az 'Automatikus törlés napok' beállítás figyelmen kívül lesz hagyva, ha az automatikus törlés nincs engedélyezve.",
+        "data": {
+          "language": "Preferált nyelv",
+          "AUTO_DELETE": "Automatikus törlés X nap után, ha az állapot 'Kézbesítve'",
+          "AUTO_DELETE_DAYS": "Napok száma a törlés előtt"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Ez az integráció már be van állítva."
+    },
+    "abort": {
+      "already_configured": "Az AliExpress Követő integráció már be van állítva."
+    },
+    "create_entry": {
+      "default": "Az AliExpress Követő sikeresen beállítva."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "AliExpress Követő Beállítása",
+        "description": "⚠️ Az 'Automatikus törlés napok' beállítás figyelmen kívül lesz hagyva, ha az automatikus törlés nincs engedélyezve.",
+        "data": {
+          "language": "Preferált nyelv",
+          "AUTO_DELETE": "Automatikus törlés X nap után, ha az állapot 'Kézbesítve'",
+          "AUTO_DELETE_DAYS": "Napok száma a törlés előtt"
+        }
+      }
+    }
+  },
+  "services": {
+    "add_tracking": {
+      "name": "Követés hozzáadása",
+      "description": "Új nyomonkövetési szám hozzáadása az AliExpress Csomagkövetőhöz.",
+      "fields": {
+        "tracking_number": {
+          "name": "Nyomonkövetési szám",
+          "description": "Az új csomag nyomonkövetési száma.",
+          "example": "123456789"
+        },
+        "title": {
+          "name": "Cím",
+          "description": "Egyedi cím az új követéshez.",
+          "example": "Laptop"
+        }
+      }
+    },
+    "remove_tracking": {
+      "name": "Követés eltávolítása",
+      "description": "Nyomonkövetési szám eltávolítása az AliExpress Csomagkövetőből.",
+      "fields": {
+        "tracking_number": {
+          "name": "Nyomonkövetési szám",
+          "description": "Eltávolítandó nyomonkövetési szám.",
+          "example": "123456789"
+        }
+      }
+    },
+    "edit_title": {
+      "name": "Cím szerkesztése",
+      "description": "Egy adott AliExpress követési entitás címének módosítása.",
+      "fields": {
+        "entity_id": {
+          "name": "Entitás azonosító",
+          "description": "A frissítendő AliExpress követési szenzor entitás azonosítója."
+        },
+        "new_title": {
+          "name": "Új cím",
+          "description": "Az új cím, amelyet be szeretne állítani az entitáshoz."
+        }
+      }
+    }
+  },
+  "title": "AliExpress Csomagkövető"
+}
